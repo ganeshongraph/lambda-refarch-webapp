@@ -39,6 +39,7 @@ Parameters:
   Repository:
     Type: String
     Description: GitHub Repository URL
+    Default: https://github.com/ganeshongraph/lambda-refarch-webapp.git
   Branch:
     Type: String
     Description: GitHub Branch
@@ -46,6 +47,7 @@ Parameters:
   OauthToken:
     Type: String
     Description: GitHub Repository URL
+    Default: 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
     NoEcho: true
 
 Resources:

@@ -137,7 +137,7 @@ Resources:
   GetTodoFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: todo-src/getTodo
+      CodeUri: ./todo-src/getTodo
       Handler: app.getToDoItem
       Tracing: Active
       Policies:

@@ -1,6 +1,6 @@
 set -x
-export $STACK_NAME=ongraph-practise
-export $AWS_DEFAULT_REGION=ap-south-1
+export STACK_NAME=amplify-demo
+export AWS_DEFAULT_REGION=ap-south-1
 
 [ -z "$STACK_NAME" ] && echo "Please specify STACK_NAME environment variable" && exit 1;
 [ -z "$AWS_DEFAULT_REGION" ] && echo "Please specify AWS_DEFAULT_REGION environment variable" && exit 1;

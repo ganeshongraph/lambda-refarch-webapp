@@ -1,15 +1,11 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
-      nodejs: 12
+        nodejs: 12.x
   build:
-    commands:    
-       - chmod +x deploy.sh
-       - ./deploy.sh
-artifacts: 
-  type: zip 
+    commands:
+      - sam package --template-file template.yaml --s3-bucket demo-ongraph --output-template-file packaged-template.yml
+artifacts:
   files:
-    - template.yaml
-    - outputsamTemplate.yaml 
+    - packaged-template.yml

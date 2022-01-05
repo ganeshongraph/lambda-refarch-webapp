@@ -1,0 +1,10 @@
+version: 0.1
+phases: 
+  install:
+     commands:
+       - aws cloudformation package --template-file template.yaml --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-117s7cv99vs5x --output-template-file outputsamTemplate.yaml
+artifacts: 
+  type: zip 
+  files:
+    - template.yaml
+    - outputsamTemplate.yaml 

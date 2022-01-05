@@ -1,7 +1,12 @@
-version: 0.1
-phases: 
+version: 0.2
+
+phases:
   install:
-     commands:
+    runtime-versions:
+      golang: 1.13
+      nodejs: 12
+  build:
+    commands:
        - aws cloudformation package --template-file template.yaml --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-117s7cv99vs5x --output-template-file outputsamTemplate.yaml
 artifacts: 
   type: zip 

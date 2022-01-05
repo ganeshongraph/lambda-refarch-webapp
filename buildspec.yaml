@@ -7,6 +7,9 @@ phases:
   build:
     commands:
        - aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-eu-west-2-582809705180 --output-template-file outputsamTemplate.yaml
+       - sam package --template-file template.yaml --output-template-file outputsamTemplate.yaml --s3-bucket demo-ongraph
+       - sam package --template-file template.yaml --output-template-file outputsamTemplate.yaml --s3-bucket codepipeline-eu-west-2-582809705180
+       - sam package --template-file template.yaml --output-template-file outputsamTemplate.yaml --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-1tum516a0jtw7
 artifacts: 
   type: zip 
   files:

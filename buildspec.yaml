@@ -5,8 +5,7 @@ phases:
     runtime-versions:
       nodejs: 12
   build:
-    commands:
-       - aws cloudformation package --template-file template.yaml --s3-bucket arn:aws:s3:::aws-sam-cli-managed-default-samclisourcebucket-s7uit7nlkzc --output-template-file outputsamTemplate.yaml
+    commands:    
        - sam package --template-file template.yaml --output-template-file outputsamTemplate.yaml --s3-bucket arn:aws:s3:::aws-sam-cli-managed-default-samclisourcebucket-s7uit7nlkzc
 artifacts: 
   type: zip 

@@ -6,6 +6,8 @@ phases:
   build:
     commands:
       - sam package --template-file template.yaml --s3-bucket demo-ongraph --output-template-file packaged-template.yml
+      - sam deploy --template-file /codebuild/output/src661262233/src/packaged-template.yml --stack-name ganesh
+
 artifacts:
   files:
     - packaged-template.yml

@@ -6,7 +6,7 @@ phases:
       nodejs: 12
   build:
     commands:
-       - aws cloudformation package --template-file template.yaml --output-template-file outputsamTemplate.yaml
+       - aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-eu-west-2-582809705180 --output-template-file outputsamTemplate.yaml
 artifacts: 
   type: zip 
   files:

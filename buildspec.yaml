@@ -2,9 +2,9 @@ version: 0.2
 phases: 
   install:
      commands:
-       - npm install -D aws-xray-sdk-core
        - npm install -g serverless
        - aws cloudformation package --template-file template.yaml --s3-bucket demo-ongraph --output-template-file packaged-template.yml
+       - aws cloudformation deploy --template-file /codebuild/output/src*/src/packaged-template.yml --stack-name demo
 artifacts: 
   type: zip 
   files:
